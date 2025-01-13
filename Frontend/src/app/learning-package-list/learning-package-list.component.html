@@ -1,0 +1,19 @@
+<p>learning-package-list works!</p>
+
+<div class="container">
+  <h2>Learning Packages</h2>
+  <button
+    (click)="onClickReload()"
+    class="btn btn-small btn-outline-info"
+  >
+    Load Learning Packages
+  </button>
+  <ul>
+    <li *ngFor="let pkg of packages">
+      <h4>{{ pkg.title }}</h4>
+      <p>{{ pkg.description }}</p>
+      <p>Category: {{ pkg.category }}</p>
+      <p>Difficulty: {{ pkg.difficulty }}</p>
+    </li>
+  </ul>
+</div>

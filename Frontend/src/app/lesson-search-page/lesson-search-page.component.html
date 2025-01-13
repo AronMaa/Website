@@ -1,0 +1,107 @@
+<p>lesson-search-page works!</p>
+<div class="container">
+  <h2>Lesson Search</h2>
+  <div class="row my-3">
+    <div class="col-md-3">
+      <label for="title">Title:</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="title" class="form-control rounded" placeholder="Search by title">
+    </div>
+  </div>
+
+  <div class="row my-3">
+    <div class="col-md-3">
+      <label for="description">Description:</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="description" class="form-control rounded" placeholder="Search by description">
+    </div>
+  </div>
+
+  <div class="row my-3">
+    <div class="col-md-3">
+      <label for="category">Category:</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="category" class="form-control rounded" placeholder="Search by category">
+    </div>
+  </div>
+
+  <div class="row my-3">
+    <div class="col-md-3">
+      <label for="level">Level:</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="level" class="form-control rounded" placeholder="Search by level">
+    </div>
+  </div>
+
+  <div class="row my-3">
+    <div class="col-md-3">
+      <label for="tags">Tags:</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="tags" class="form-control rounded" placeholder="Search by tags">
+    </div>
+  </div>
+
+  <div class="row my-3">
+    <div class="col-md-3">
+      <label for="author">Author:</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="author" class="form-control rounded" placeholder="Search by author">
+    </div>
+  </div>
+
+  <div class="row my-3">
+    <div class="col-md-3">
+      <label>Last Modified Date:</label>
+    </div>
+    <div class="col-md-9">
+      <input type="date" id="startDate" class="form-control rounded" placeholder="Start Date">
+      <input type="date" id="endDate" class="form-control rounded mt-2" placeholder="End Date">
+    </div>
+  </div>
+
+  <div class="row my-3">
+    <div class="col-md-12 text-center">
+      <button class="btn btn-primary">Search</button>
+    </div>
+  </div>
+
+  <!-- Advanced Search Toggle -->
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="advancedSearchSwitch" (change)="toggleAdvancedSearch()">
+    <label class="form-check-label" for="advancedSearchSwitch">Advanced Search</label>
+  </div>
+
+  <!-- Advanced Search Fields -->
+  <div *ngIf="isAdvancedSearch" class="mt-3">
+    <div class="row my-3">
+      <div class="col-md-3">
+        <label>Numerical Range:</label>
+      </div>
+      <div class="col-md-9">
+        <input type="number" id="minValue" class="form-control rounded" placeholder="Min value">
+        <input type="number" id="maxValue" class="form-control rounded mt-2" placeholder="Max value">
+      </div>
+    </div>
+
+    <div class="row my-3">
+      <div class="col-md-3">
+        <label for="stringOperator">String Operator:</label>
+      </div>
+      <div class="col-md-9">
+        <select id="stringOperator" class="form-control rounded">
+          <option value="contains">Contains (ignore case)</option>
+          <option value="like">Like</option>
+          <option value="startsWith">Starts With</option>
+          <option value="exact">Exact</option>
+          <option value="caseInsensitiveLike">Case-Insensitive Like</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

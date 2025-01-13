@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Brand or Home Item -->
+    <a class="navbar-brand" routerLink="/">Home
+      <fa-icon [icon]="faHome"></fa-icon>
+    </a>
+
+    <!-- Toggler for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <!--Tests-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="testDropdown" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Tests
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="testDropdown">
+            <li class="nav-item">
+              <a class="dropdown-item" routerLink="/test-page1">Test Page1</a>
+            </li>
+            <li class="nav-item">
+              <a class="dropdown-item" routerLink="/learning-packages">Learning Packages</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- File Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="fileDropdown" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">
+            File
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="fileDropdown">
+            <li><a class="dropdown-item" routerLink="/explore-lessons">Explore lessons</a></li>
+            <li><a class="dropdown-item" routerLink="/import">Import...</a></li>
+            <li><a class="dropdown-item" routerLink="/new">New...</a></li>
+            <li><a class="dropdown-item" routerLink="/export">Export...</a></li>
+          </ul>
+        </li>
+
+        <!-- Study Now Item -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/study-now">Study Now</a>
+        </li>
+
+        <!-- Progresses Statistics Item -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/progress-statistics">Progress Statistics</a>
+        </li>
+
+        <!-- Achievements Item -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/achievements">Achievements</a>
+        </li>
+
+        <!-- Help Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="helpDropdown" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Help
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="helpDropdown">
+            <li><a class="dropdown-item" routerLink="/glossary">Glossary</a></li>
+            <li><a class="dropdown-item" routerLink="/documentation">Documentation</a></li>
+            <li><a class="dropdown-item" routerLink="/about">About</a></li>
+          </ul>
+        </li>
+
+        <!-- Profile Dropdown on the Right -->
+        <li class="nav-item dropdown ms-auto">
+          <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+            <li><a class="dropdown-item" href="#" (click)="logout()">Logout</a></li>
+            <li><a class="dropdown-item" routerLink="/login">Login</a></li>
+            <li><a class="dropdown-item" routerLink="/settings">Settings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

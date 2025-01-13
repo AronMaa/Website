@@ -1,0 +1,26 @@
+/* menu-nav-bar.component.css */
+.navbar {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  background-color: #f8f9fa;
+}
+
+.ms-auto {
+  margin-left: auto;
+}
