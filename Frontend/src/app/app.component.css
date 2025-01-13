@@ -1,0 +1,44 @@
+/* General */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #ddd;
+  font-size: 0.875rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.animated {
+  background: linear-gradient(45deg, #007bff, #6610f2, #28a745);
+  background-size: 300% 300%;
+  animation: moveBg 6s infinite;
+  transition: background-color 0.3s ease-in-out;
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hover-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hover-icon:hover {
+  transform: scale(1.2);
+  color: #f30606; /* Bright yellow for emphasis */
+}
